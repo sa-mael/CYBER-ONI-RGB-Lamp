@@ -45,4 +45,3 @@ html,body{height:100%;margin:0}
   display:grid; place-items:center;
   pointer-events:none;
 }
-.btn{ pointer-events:auto; padding:10px 16px; border:1px solid #e6edf3a6; background:#0000; color:#e6edf3; border-radius:10px }

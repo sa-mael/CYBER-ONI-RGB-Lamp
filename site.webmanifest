@@ -1,0 +1,11 @@
+{
+"name": "CYBER‑ONI RGB Lamp",
+"short_name": "CYBER‑ONI",
+"start_url": "/",
+"display": "standalone",
+"background_color": "#0b0b0f",
+"theme_color": "#6e32ff",
+"icons": [
+{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+]
+}

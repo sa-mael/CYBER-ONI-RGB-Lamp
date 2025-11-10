@@ -1,65 +1,75 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>CYBER ONI — Three‑panel</title>
-<link rel="stylesheet" href="assets/app.css" />
-</head>
-<body class="tri-body">
-<div class="tri-grid">
-<!-- MENU (left) -->
-<aside class="tri-menu" aria-label="Menu">
-<div class="tri-logo" aria-label="Logo">A</div>
-<nav class="tri-menu-nav">
-<a class="tri-icn" href="#" aria-label="User" title="User">👤</a>
-<a class="tri-icn" href="#" aria-label="Settings" title="Settings">⚙️</a>
-<a class="tri-icn" href="#" aria-label="Purchases" title="Purchases">🧾</a>
-<a class="tri-icn" href="#" aria-label="Main" title="Main">🏠</a>
-<a class="tri-icn" href="#" aria-label="Place" title="Place">📍</a>
-<a class="tri-icn" href="#" aria-label="Notifications" title="Notifications">🔔</a>
-<a class="tri-icn tri-exit" href="#" aria-label="Exit" title="Exit">🚪</a>
-</nav>
-</aside>
-
-
-<!-- MAIN (center) -->
-<main class="stage">
-    <figure class="card">
-      <img src="demo.jpg" alt="photo" />
-    </figure>
-  </main>
-
-
-<!-- INFORMATION (right) -->
-<aside class="tri-info" aria-label="Information">
-<!-- top: company — product -->
-<header class="tri-info-head">
-<div class="tri-co">Arttous</div>
-<div class="tri-prod">CYBER ONI Lamp</div>
-</header>
-
-
-<!-- upper: carousel with multiple pages -->
-<section class="tri-card tri-carousel" aria-label="Highlights">
-<div class="tri-slides" id="slides" tabindex="0" aria-live="polite">
-<article class="tri-slide">
-<h3 class="tri-h3">Design</h3>
-<p class="tri-p">Matte shell, neon eyes, sculpted lines.</p>
-</article>
-<article class="tri-slide">
-<h3 class="tri-h3">Materials</h3>
-<p class="tri-p">PLA/PETG body, diffused light window.</p>
-</article>
-<article class="tri-slide">
-<h3 class="tri-h3">Specs</h3>
-<ul class="tri-list">
-<li>20 × 35 × 18 cm</li>
-<li>USB‑C 5 V</li>
-<li>Addressable RGB</li>
-</ul>
-</article>
 </div>
-<div class="tri-car-nav">
-<button class="tri-btn tri-prev" type="button" aria-label="Previous slide">‹</button>
+<div class="cfg-preview">
+<div class="lamp-silhouette">
+<img src="assets/img/cyber-oni.png" alt="CYBER‑ONI preview" />
+<div class="lamp-glow"></div>
+</div>
+</div>
+</section>
+
+
+<section id="gallery" class="section gallery">
+<h2>Gallery</h2>
+<div class="grid gallery-grid">
+<img src="assets/img/gallery-1.jpg" alt="Lamp in interior 1" />
+<img src="assets/img/gallery-2.jpg" alt="Lamp in interior 2" />
+<img src="assets/img/gallery-3.jpg" alt="Lamp in interior 3" />
+</div>
+</section>
+
+
+<section id="specs" class="section specs">
+<h2>Specifications</h2>
+<dl class="spec-list">
+<div><dt>Size</dt><dd>h 450 mm × w 280 mm × d 230 mm</dd></div>
+<div><dt>Material</dt><dd>PLA/ABS + transparent diffuser polymer</dd></div>
+<div><dt>Power</dt><dd>USB‑C, 5V, ≤ 5W</dd></div>
+<div><dt>Light</dt><dd>RGB, 16.7M, CRI 90+</dd></div>
+<div><dt>Weight</dt><dd>~1.2 kg</dd></div>
+<div><dt>Cable</dt><dd>1.5 m, included</dd></div>
+</dl>
+</section>
+
+
+<section id="buy" class="section buy">
+<h2>Order</h2>
+<p class="price"><span class="old">$149</span><span class="new">$129</span></p>
+<form class="order" action="#" method="post" onsubmit="return false">
+<label>Email<input type="email" required placeholder="you@example.com" /></label>
+<label>Quantity<input type="number" min="1" value="1" /></label>
+<button class="btn primary wide" type="submit">Pre‑order</button>
+<p class="note">Payments are disabled on this demo page.</p>
+</form>
+</section>
+
+
+<section id="faq" class="section faq">
+<h2>FAQ</h2>
+<details>
+<summary>Does the lamp heat up?</summary>
+<p>No. LED module with passive cooling. Safe for long sessions.</p>
+</details>
+<details>
+<summary>Can I use a power bank?</summary>
+<p>Yes. Requires 5V USB‑C, up to 5W.</p>
+</details>
+<details>
+<summary>Does it remember the last mode?</summary>
+<p>Yes. The last selected mode is stored in local storage (demo) or MCU (production device).</p>
+</details>
+</section>
+
+
+<footer class="footer">
+<div class="legal">
+<a href="/privacy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+</div>
+<p>© <span id="year"></span> CYBER‑ONI. All rights reserved.</p>
+</footer>
+
+
+<script src="assets/js/main.js" defer></script>
+</body>
 </html>

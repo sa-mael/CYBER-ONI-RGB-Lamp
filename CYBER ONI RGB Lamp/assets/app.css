@@ -75,3 +75,53 @@ clip-path: path("M 480,840 L 480,540 A 60,60 0,0,0 420,480 L 180,480 A 60,60 0,0
 
 /* footer */
 .tri-foot{display:flex;justify-content:center;align-items:center;color:var(--tri-muted);border-top:1px solid var(--tri-line);padding:16px;margin:12px 18px}
+
+ 
+
+:root{
+  --Wpx:1200px;  /* база формы */
+  --Hpx:900px;
+  --s:1;         /* ЧИСЛО. Заполняется из JS */
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+.stage{min-height:100dvh;display:grid;place-items:center;background:#0e1116;color:#e6edf3}
+
+/* ВНЕШНИЙ контейнер реального размера на странице */
+.box{
+  position:relative;
+  width:  calc(var(--Wpx) * var(--s));   /* length * number — валидно */
+  height: calc(var(--Hpx) * var(--s));
+}
+
+/* Внутренняя база 1200×900, визуально масштабируем */
+.frame{
+  position:absolute; inset:0;
+  width: var(--Wpx); height: var(--Hpx);
+  transform: scale(var(--s));
+  transform-origin: top left;
+}
+
+/* Форма с твоим path */
+.shape{
+  position:absolute; inset:0;
+  background:#1b222c;
+  clip-path: path("M 480,840 L 480,540 A 60,60 0,0,0 420,480 L 180,480 A 60,60 0,0,1 120,420 L 120,60 A 60,60 0,0,1 180,0 L 480,0 L 540,60 L 720,60 L 780,0 L 1140,0 A 60,60 0,0,1 1200,60 L 1200,840 A 60,60 0,0,1 1140,900 L 540,900 A 60,60 0,0,1 480,840 Z");
+  box-shadow: 0 0 0 3px #ff3b30;
+  overflow:hidden; /* чтобы 3D не вылазило */
+}
+
+/* 3D внутри формы */
+.viewer{ width:100%; height:100%; display:block; background:linear-gradient(135deg,#1b2635,#111a24) }
+
+/* Нежмяный UI поверх (обратный масштаб) */
+.ui{
+  position:absolute; inset:0;
+  width: var(--Wpx); height: var(--Hpx);
+  left:50%; top:50%; translate:-50% -50%;
+  transform: scale(calc(1 / var(--s)));
+  transform-origin: center;
+  display:grid; place-items:center;
+  pointer-events:none;
+}
