@@ -40,6 +40,7 @@
 </head>
 <body>
 <header class="nav">
+<div class="nav-inner">
 <a class="brand" href="#home" aria-label="CYBER‑ONI home">
 <img src="assets/img/logo.svg" alt="CYBER‑ONI logo" class="logo" />
 <span>CYBER‑ONI</span>
@@ -52,10 +53,11 @@
 <a href="#faq">FAQ</a>
 </nav>
 <a class="btn primary" href="#buy">Buy</a>
+</div>
 </header>
 
 
-<main id="home" class="hero" tabindex="-1">
+<main id="home" class="hero container" tabindex="-1">
 <div class="bg-blur"></div>
 <section class="hero-content">
 <h1><span class="accent">CYBER‑ONI</span> RGB Lamp</h1>
@@ -77,7 +79,7 @@
 </main>
 
 
-<section id="features" class="section features">
+<section id="features" class="section">
 <h2>Features</h2>
 <ul class="grid cards">
 <li>
@@ -89,6 +91,39 @@
 <p>High‑gloss coating with soft reflections for a wet‑look shine.</p>
 </li>
 <li>
+<h3>Color Intelligence</h3>
+<p>RGB Flow, Pulse, Breathe, Noise, Static. Remembers the last mode.</p>
+</li>
+<li>
+<h3>Connectivity</h3>
+<p>USB‑C, ≤ 5 W. Works from a power bank.</p>
+</li>
+</ul>
+</section>
+
+
+<section id="configurator" class="section configurator" aria-label="Color configurator">
+<div class="cfg-panel">
+<h2>Pick a color</h2>
+<input id="color" type="color" value="#8d4bff" aria-label="Color palette" />
+<div class="toggles">
+<button class="btn" data-mode="static">Static</button>
+<button class="btn" data-mode="pulse">Pulse</button>
+<button class="btn" data-mode="rgb">RGB Flow</button>
+</div>
+<label class="range">Brightness
+<input id="intensity" type="range" min="0" max="100" value="70" />
+</label>
+</div>
+<div class="cfg-preview">
+<div class="lamp-silhouette">
+<img src="assets/img/cyber-oni.png" alt="CYBER‑ONI preview" />
+<div class="lamp-glow"></div>
+</div>
+</div>
+</section>
+
+
 <section id="gallery" class="section gallery">
 <h2>Gallery</h2>
 <div class="grid gallery-grid">
