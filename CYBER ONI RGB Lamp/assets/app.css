@@ -1,70 +1,58 @@
-/* Minimal dark theme. Unique prefix: oni- */
+/* Black & White theme for the three‑panel skeleton (tri‑ prefix) */
 :root{
-  --oni-bg:#0a0b10; --oni-fg:#e7e7ea; --oni-muted:#a3a3ad; --oni-line:#1c1d26;
-  --oni-card:#12121a; --oni-chip:#161624; --oni-accent:#22e6a0;
-  --oni-radius:22px;
+  --tri-bg:#0a0a0a; --tri-fg:#f2f2f2; --tri-muted:#bdbdbd; --tri-line:#2a2a2a;
+  --tri-card:#111111; --tri-chip:#151515; --tri-ac:#ffffff;
 }
-*{box-sizing:border-box}
-html,body{margin:0}
-.oni-body{background:var(--oni-bg);color:var(--oni-fg);
-  font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+*{box-sizing:border-box} html,body{margin:0}
+.tri-body{background:var(--tri-bg);color:var(--tri-fg);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
 
-/* Layout grid */
-.oni-grid{display:grid;gap:18px;padding:18px;
-  grid-template-columns:80px 1fr 320px;}
-@media (max-width:1100px){ .oni-grid{grid-template-columns:72px 1fr} .oni-rail{display:none} }
+/* layout: menu | main | info */
+.tri-grid{display:grid;gap:18px;padding:18px;grid-template-columns:84px 1fr 360px}
+@media (max-width:1100px){.tri-grid{grid-template-columns:72px 1fr} .tri-info{display:none}}
 
-/* Sidebar */
-.oni-side{position:sticky;top:18px;height:calc(100vh - 36px);
-  display:flex;flex-direction:column;align-items:center;justify-content:space-between;
-  padding:12px;border-radius:18px;background:rgba(22,22,28,.55);
-  border:1px solid var(--oni-line);backdrop-filter:saturate(140%) blur(10px)}
-.oni-logo{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;
-  background:#000;color:#fff;font-weight:800;box-shadow:0 0 0 2px rgba(138,43,226,.35)}
-.oni-side-nav{display:flex;flex-direction:column;gap:8px}
-.oni-icn{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;
-  border:1px solid var(--oni-line);color:#d1d1d7;text-decoration:none;
-  background:rgba(255,255,255,.05)}
-.oni-icn:hover{background:rgba(255,255,255,.12)}
+/* MENU */
+.tri-menu{position:sticky;top:18px;height:calc(100vh - 36px);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:12px;gap:12px;border-radius:18px;border:1px solid var(--tri-line);background:rgba(255,255,255,.03);backdrop-filter:saturate(140%) blur(10px)}
+.tri-logo{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:#000;color:#fff;font-weight:800;box-shadow:0 0 0 2px rgba(255,255,255,.15)}
+.tri-menu-nav{display:flex;flex-direction:column;gap:8px;align-items:center}
+.tri-icn{display:grid;place-items:center;width:46px;height:46px;border-radius:12px;border:1px solid var(--tri-line);background:rgba(255,255,255,.06);color:#eaeaea;text-decoration:none}
+.tri-icn:hover{background:rgba(255,255,255,.12)}
+.tri-exit{margin-top:auto}
 
-/* Main column */
-.oni-main{display:grid;gap:14px;grid-template-rows:auto auto 1fr}
-.oni-topbar{display:flex;align-items:center;justify-content:space-between;
-  border:1px solid var(--oni-line);border-radius:18px;padding:10px 14px;
-  background:rgba(22,22,28,.55);backdrop-filter:saturate(140%) blur(10px)}
-.oni-crumb{display:flex;gap:8px;color:var(--oni-muted);font-size:14px}
-.oni-badge{padding:6px 12px;border-radius:999px;background:var(--oni-chip);
-  border:1px solid var(--oni-line);font-weight:700}
+/* MAIN */
+.tri-main{display:grid;grid-template-rows:1fr}
+.tri-stage{position:relative;min-height:520px;border-radius:24px;border:1px solid var(--tri-line);overflow:hidden;background:#0c0c0c}
+.tri-stage-fill{position:absolute;inset:0;background:
+  radial-gradient(50% 70% at 50% 40%,rgba(255,255,255,.06),transparent 60%),
+  radial-gradient(60% 80% at 20% 80%,rgba(255,255,255,.04),transparent 60%)}
 
-/* Hero */
-.oni-hero{position:relative;min-height:440px;overflow:hidden;
-  border-radius:26px;border:1px solid var(--oni-line);background:#0c0d14}
-.oni-hero-fill{position:absolute;inset:0;
-  background:radial-gradient(60% 80% at 60% 30%,rgba(138,43,226,.25),transparent 60%),
-             radial-gradient(60% 80% at 30% 70%,rgba(0,224,255,.18),transparent 60%)}
-.oni-product{position:absolute;left:16px;bottom:16px;max-width:560px;
-  background:linear-gradient(180deg,rgba(22,22,28,.92),rgba(12,12,18,.92));
-  border:1px solid var(--oni-line);border-radius:18px;padding:14px}
-.oni-product-row{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
-.oni-h1{margin:0;font-size:20px}
-.oni-sub{margin:4px 0 0;color:var(--oni-muted);font-size:14px}
-.oni-price{font-size:28px;font-weight:800}
-.oni-btn{border:0;border-radius:16px;padding:10px 16px;cursor:pointer;
-  background:linear-gradient(90deg,#28e08f,#a8ff78);color:#0c0d14;font-weight:800}
+/* INFO */
+.tri-info{display:grid;grid-template-rows:auto auto 1fr auto auto;gap:14px}
+.tri-info-head{display:flex;flex-direction:column;gap:4px;padding:10px 12px;border-radius:14px;border:1px solid var(--tri-line);background:rgba(255,255,255,.03)}
+.tri-co{font-weight:700;letter-spacing:.2px}
+.tri-prod{color:var(--tri-muted);font-size:14px}
 
-/* Gallery strip */
-.oni-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
-.oni-thumb{height:160px;border-radius:14px;border:1px solid var(--oni-line);
-  background:var(--oni-card)}
-@media (max-width:700px){ .oni-strip{grid-template-columns:1fr} }
+.tri-card{background:var(--tri-card);border:1px solid var(--tri-line);border-radius:18px;padding:12px}
+.tri-h3{margin:0 0 6px 0;font-size:16px}
+.tri-p{margin:0;color:var(--tri-muted)}
 
-/* Right column */
-.oni-rail{display:grid;gap:16px}
-.oni-card{background:var(--oni-card);border:1px solid var(--oni-line);
-  border-radius:22px;padding:14px}
-.oni-h2{margin:0 0 6px 0;font-size:16px}
-.oni-p{margin:0;color:var(--oni-muted);font-size:14px}
+/* carousel */
+.tri-slides{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+.tri-slide{min-width:100%;scroll-snap-align:center;background:#0f0f0f;border:1px solid var(--tri-line);border-radius:14px;padding:12px}
+.tri-slides::-webkit-scrollbar{height:6px} .tri-slides::-webkit-scrollbar-thumb{background:#2a2a2a;border-radius:10px}
 
-/* Footer */
-.oni-foot{display:flex;justify-content:center;align-items:center;gap:12px;
-  color:var(--oni-muted);border-top:1px solid var(--oni-line);padding:18px}
+.tri-car-nav{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px}
+.tri-btn{border:1px solid var(--tri-line);border-radius:12px;padding:8px 10px;background:#fff;color:#000;font-weight:800;cursor:pointer}
+.tri-btn:hover{background:#eaeaea}
+.tri-dots{display:flex;gap:6px}
+.tri-dots i{display:block;width:8px;height:8px;border-radius:999px;background:#555}
+.tri-dots i.is-active{background:var(--tri-ac)}
+
+/* use block */
+.tri-steps{margin:0;padding-left:18px;color:var(--tri-muted)}
+
+/* link */
+.tri-product-link{display:block;text-align:center;padding:10px;border:1px solid var(--tri-line);border-radius:14px;background:var(--tri-chip);color:var(--tri-fg);text-decoration:none}
+.tri-product-link:hover{background:#1e1e1e}
+
+/* footer */
+.tri-foot{display:flex;justify-content:center;align-items:center;color:var(--tri-muted);border-top:1px solid var(--tri-line);padding:16px;margin:12px 18px}
