@@ -9,7 +9,7 @@
 --accent-rgb:141,75,255;
 --radius:18px;
 --shadow:0 20px 60px rgba(0,0,0,.45);
---wrap:1200px; /* global max width */
+--wrap:1900px; /* global max width */
 }
 
 
@@ -46,10 +46,11 @@ a{color:inherit; text-decoration:none}
 
 
 /* === Hero === */
+figure{margin:0}
 /* === Hero === */
-.hero{position:relative; display:grid; grid-template-columns:minmax(280px,560px) minmax(280px,560px); justify-content:center; align-items:center; gap:36px; padding:64px 0}
-.bg-blur{position:absolute; inset:0; background:radial-gradient(600px 600px at 20% 30%, rgba(var(--accent-rgb),.25), transparent 60%); filter:blur(40px); opacity:.7; pointer-events:none}
-.hero-content{max-width:760px; text-align:center; justify-self:center}
+.hero{position:relative; display:grid; grid-template-columns:minmax(480px,960px) minmax(480px,960px); justify-content:center; align-items:center; gap:36px; padding:64px 0}
+.bg-blur{position:absolute; inset:0; background:radial-gradient(600px 600px at 20% 30%, rgba(var(--accent-rgb),.25), transparent 30%); filter:blur(40px); opacity:.7; pointer-events:none}
+.hero-content{max-width:960px; text-align:center; justify-self:center}
 .hero h1{font-size:clamp(34px,6vw,64px); line-height:1.05; margin:0 0 10px}
 .accent{background:linear-gradient(90deg, #b38cff, #6e32ff 40%, #24d6ff 90%); -webkit-background-clip:text; background-clip:text; color:transparent}
 .lead{margin:0 0 18px; color:var(--muted)}
@@ -57,7 +58,7 @@ a{color:inherit; text-decoration:none}
 .badges{display:flex; flex-wrap:wrap; gap:10px; color:#c9c9de; justify-content:center}
 .badges span{padding:6px 10px; border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.03)}
 .hero-art{position:relative; display:flex; align-items:center; justify-content:center; justify-self:center}
-.hero-art .glow{position:absolute; width:62%; height:62%; border-radius:50%; filter:blur(60px); background:radial-gradient(circle at 50% 50%, rgba(var(--accent-rgb),.55), transparent 60%); opacity:.85; pointer-events:none}
+
 
 
 /* === Sections === */
