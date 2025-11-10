@@ -19,11 +19,30 @@
 .tri-exit{margin-top:auto}
 
 /* MAIN */
-.tri-main{display:grid;grid-template-rows:1fr}
-.tri-stage{position:relative;min-height:520px;border-radius:24px;border:1px solid var(--tri-line);overflow:hidden;background:#0c0c0c}
-.tri-stage-fill{position:absolute;inset:0;background:
-  radial-gradient(50% 70% at 50% 40%,rgba(255,255,255,.06),transparent 60%),
-  radial-gradient(60% 80% at 20% 80%,rgba(255,255,255,.04),transparent 60%)}
+
+.card{
+  width:100vh;
+  height:100vh;
+  position:relative;
+  background:#292929;             /* виден, если нет картинки */
+  overflow:hidden;
+  filter: drop-shadow(0 12px 28px rgba(0,0,0,.22));
+  transform: scale(var(--scale));
+  transform-origin: top left;
+
+  /* форма из скрина */
+/* 1200×900 */
+clip-path: path("M 480,840 L 480,540 A 60,60 0,0,0 420,480 L 180,480 A 60,60 0,0,1 120,420 L 120,60 A 60,60 0,0,1 180,0 L 480,0 L 540,60 L 720,60 L 780,0 L 1140,0 A 60,60 0,0,1 1200,60 L 1200,840 A 60,60 0,0,1 1140,900 L 540,900 A 60,60 0,0,1 480,840 Z");
+}
+
+/* чтобы фото заполнило форму */
+.card > img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
 /* INFO */
 .tri-info{display:grid;grid-template-rows:auto auto 1fr auto auto;gap:14px}
