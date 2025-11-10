@@ -1,76 +1,65 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CYBER ONI</title>
-  <link rel="stylesheet" href="assets/app.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CYBER ONI — Three‑panel</title>
+<link rel="stylesheet" href="assets/app.css" />
 </head>
-<body class="oni-body">
-  <div class="oni-grid">
-    <!-- Left sidebar -->
-    <aside class="oni-side" aria-label="Primary">
-      <div class="oni-logo">A</div>
-      <nav class="oni-side-nav">
-        <a class="oni-icn" href="#" aria-label="Home">🏠</a>
-        <a class="oni-icn" href="#" aria-label="Products">📦</a>
-        <a class="oni-icn" href="#" aria-label="FAQ">❓</a>
-      </nav>
-      <div class="oni-side-bottom">
-        <a class="oni-icn" href="#" aria-label="Settings">⚙️</a>
-      </div>
-    </aside>
+<body class="tri-body">
+<div class="tri-grid">
+<!-- MENU (left) -->
+<aside class="tri-menu" aria-label="Menu">
+<div class="tri-logo" aria-label="Logo">A</div>
+<nav class="tri-menu-nav">
+<a class="tri-icn" href="#" aria-label="User" title="User">👤</a>
+<a class="tri-icn" href="#" aria-label="Settings" title="Settings">⚙️</a>
+<a class="tri-icn" href="#" aria-label="Purchases" title="Purchases">🧾</a>
+<a class="tri-icn" href="#" aria-label="Main" title="Main">🏠</a>
+<a class="tri-icn" href="#" aria-label="Place" title="Place">📍</a>
+<a class="tri-icn" href="#" aria-label="Notifications" title="Notifications">🔔</a>
+<a class="tri-icn tri-exit" href="#" aria-label="Exit" title="Exit">🚪</a>
+</nav>
+</aside>
 
-    <!-- Center column -->
-    <main class="oni-main" id="main">
-      <header class="oni-topbar">
-        <div class="oni-crumb"><span>Home</span><span>/</span><strong>CYBER ONI</strong></div>
-        <div class="oni-badge">CYBER ONI</div>
-      </header>
 
-      <!-- Hero / stage -->
-      <section class="oni-hero" aria-label="Hero">
-        <!-- Replace with an <img> later if you want -->
-        <div class="oni-hero-fill" aria-hidden="true"></div>
+<!-- MAIN (center) -->
+<main class="tri-main" id="main" aria-label="Main content">
+<section class="tri-stage" aria-label="Hero / workspace">
+<div class="tri-stage-fill" aria-hidden="true"></div>
+</section>
+</main>
 
-        <!-- Product card -->
-        <div class="oni-product">
-          <div class="oni-product-row">
-            <div>
-              <h1 class="oni-h1">CYBER ONI RGB Lamp</h1>
-              <p class="oni-sub">3D-printed shell • USB-C • RGB</p>
-            </div>
-            <div class="oni-price">$229</div>
-          </div>
-          <div class="oni-product-row">
-            <button class="oni-btn" type="button">Add to cart</button>
-          </div>
-        </div>
-      </section>
 
-      <!-- Gallery strip -->
-      <section class="oni-strip" aria-label="Gallery">
-        <div class="oni-thumb"></div>
-        <div class="oni-thumb"></div>
-        <div class="oni-thumb"></div>
-      </section>
-    </main>
+<!-- INFORMATION (right) -->
+<aside class="tri-info" aria-label="Information">
+<!-- top: company — product -->
+<header class="tri-info-head">
+<div class="tri-co">Arttous</div>
+<div class="tri-prod">CYBER ONI Lamp</div>
+</header>
 
-    <!-- Right rail -->
-    <aside class="oni-rail">
-      <article class="oni-card">
-        <h2 class="oni-h2">Clear RGB Glow</h2>
-        <p class="oni-p">Smooth gradients, no flicker.</p>
-      </article>
-      <article class="oni-card">
-        <h2 class="oni-h2">Easy Controls</h2>
-        <p class="oni-p">Tap to cycle, hold to dim.</p>
-      </article>
-    </aside>
-  </div>
 
-  <footer class="oni-foot">
-    <p>© 2025 Arttous — Light sculptures</p>
-  </footer>
-</body>
+<!-- upper: carousel with multiple pages -->
+<section class="tri-card tri-carousel" aria-label="Highlights">
+<div class="tri-slides" id="slides" tabindex="0" aria-live="polite">
+<article class="tri-slide">
+<h3 class="tri-h3">Design</h3>
+<p class="tri-p">Matte shell, neon eyes, sculpted lines.</p>
+</article>
+<article class="tri-slide">
+<h3 class="tri-h3">Materials</h3>
+<p class="tri-p">PLA/PETG body, diffused light window.</p>
+</article>
+<article class="tri-slide">
+<h3 class="tri-h3">Specs</h3>
+<ul class="tri-list">
+<li>20 × 35 × 18 cm</li>
+<li>USB‑C 5 V</li>
+<li>Addressable RGB</li>
+</ul>
+</article>
+</div>
+<div class="tri-car-nav">
+<button class="tri-btn tri-prev" type="button" aria-label="Previous slide">‹</button>
 </html>
