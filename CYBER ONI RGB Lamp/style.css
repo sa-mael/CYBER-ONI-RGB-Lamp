@@ -1,0 +1,38 @@
+/* фон страницы как в примере */
+html,body{height:100%}
+body{
+  margin:0;
+  min-height:100dvh;
+  display:grid;
+  place-items:center;
+  background:#eedfce;
+}
+
+/* масштаб без правки пути: 1 = исходный размер 150×200 */
+:root{ --scale:1 }
+
+.card{
+  width:150px;
+  height:200px;
+  position:relative;
+  background:#551c01;             /* виден, если нет картинки */
+  overflow:hidden;
+  filter: drop-shadow(0 12px 28px rgba(0,0,0,.22));
+  transform: scale(var(--scale));
+  transform-origin: top left;
+
+  /* форма из скрина */
+  clip-path: path("M 120,10 L 120,60 A 10,10 0,0,0 130,70 L 170,70 A 10,10 0,0,1 180,80 L 180,140 A 10,10 0,0,1 170,150 L 120,150 L 110,140 L 80,140 L 70,150 L 10,150 A 10,10 0,0,1 0,140 L 0,10 A 10,10 0,0,1 10,0 L 110,0 A 10,10 0,0,1 120,10 Z");
+}
+
+/* чтобы фото заполнило форму */
+.card > img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* центрирование контейнера */ 
+.stage{ padding:24px }
