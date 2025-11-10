@@ -1,4 +1,21 @@
-(function(){
+function mainJS(){
+'use strict';
+const root = document.documentElement;
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+
+// Configurator
+const color = document.getElementById('color');
+const intensity = document.getElementById('intensity');
+const buttons = document.querySelectorAll('[data-mode]');
+const previewGlow = document.querySelector('.lamp-glow');
+
+
+const hexToRgb = (hex)=>{
+const m = hex.replace('#','').match(/.{1,2}/g); if(!m) return [141,75,255];
+return m.map(v=>parseInt(v,16));
+};
 
 
 function setAccent(rgb){
@@ -17,8 +34,7 @@ if (previewGlow) previewGlow.style.opacity = (0.2 + 0.9*alpha).toFixed(2);
 // Static
 function modeStatic(){
 document.body.classList.remove('rgb-flow');
-}
-
+}}
 
 // Pulse
 let pulseTimer = null; let t = 0;
@@ -81,4 +97,3 @@ if (mode === 'rgb') modeRgbFlow();
 // Restore mode
 const savedMode = localStorage.getItem('oni_mode') || 'static';
 ({'static':modeStatic,'pulse':modePulse,'rgb':modeRgbFlow})[savedMode]();
-})();
