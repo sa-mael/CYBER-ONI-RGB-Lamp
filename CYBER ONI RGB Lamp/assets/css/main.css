@@ -30,7 +30,7 @@
 .range{display:flex; flex-direction:column; gap:8px; color:var(--muted)}
 .cfg-preview{display:grid; place-items:center; background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00)); border:1px solid var(--line); border-radius:var(--radius)}
 .lamp-silhouette{position:relative; width:min(520px,90%)}
-.lamp-glow{position:absolute; inset:10% 8% 20% 8%; filter:blur(40px); background:radial-gradient(60% 60% at 60% 40%, rgba(var(--accent-rgb),.75), transparent 60%); opacity:.9; mix-blend:screen; pointer-events:none}
+.lamp-glow{position:absolute; inset:10% 8% 20% 8%; filter:blur(40px); background:radial-gradient(60% 60% at 60% 40%, rgba(var(--accent-rgb),.75), transparent 60%); opacity:.9; mix-blend-mode:screen; pointer-events:none}
 
 
 /* === Gallery === */
