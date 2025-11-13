@@ -8,3 +8,4 @@ Optimization:
 - Compress images in assets/img/ (prefer WebP).
 - Fill in real prices and copy.
 - Add analytics (e.g., Plausible/GA4) if desired.
+- https://www.artstation.com/artwork/oJvwaJ
