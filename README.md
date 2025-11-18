@@ -28,9 +28,11 @@ The lamp is fully printable, supports RGB LED strips, and includes a modular int
 2. Install RGB strip inside  
 3. Connect to USB/5V  
 4. Close the body and enjoy  
+<img width="2100" height="2100" alt="untitled3" src="https://github.com/user-attachments/assets/4eaaf1fb-68d4-4d92-b754-293482bc1288" />
 
 ## 📷 Preview
-(Add your images here)
+![Uploading untitled3.png…]()
+
 
 ##  License
 MIT License – free to use, modify, and share.
